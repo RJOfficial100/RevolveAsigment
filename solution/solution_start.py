@@ -1,3 +1,4 @@
+#Remove below 2 lines if not required as per your spark setup.
 import findspark
 findspark.init('C:\\Apps\\spark-3.0.3-bin-hadoop2.7')
 
@@ -7,6 +8,7 @@ from pyspark.sql import SparkSession
 from pyspark.sql import functions as F
 from datetime import datetime
 
+#change configuration according to your spark setup.
 spark=SparkSession.builder.master("local[2]").appName("RevolveAssignment").getOrCreate()
 
 def main():
